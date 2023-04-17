@@ -23,7 +23,7 @@ todoRouter.post("/", async (req, res) => {
   console.log(todo)
   await todo.save()
   // res.send("saved")
-  res.status(200).send(foundUser)
+  res.status(200).send(todo)
 })
 
 module.exports = todoRouter

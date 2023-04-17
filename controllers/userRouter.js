@@ -10,7 +10,7 @@ userRouter.get("/", async (req, res) => {
 userRouter.post("/", async (req, res) => {
   const { userId } = req.body
   // console.log(userId)
-  const foundUser = await User.findOne({userId})
+  const foundUser = await User.findOne({userId}).populate("todos")
   if(!foundUser){
     res.status(501).send("user not found")
   }
