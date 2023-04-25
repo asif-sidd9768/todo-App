@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
   userId: String,
+  username: String,
   todos: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Todo"
