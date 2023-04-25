@@ -29,7 +29,7 @@ userRouter.post("/register", async(req, res) => {
     userId,
     username
   })
-  user.save()
+  await user.save()
   res.send(user)
 })
 
